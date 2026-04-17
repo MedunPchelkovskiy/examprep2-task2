@@ -1,0 +1,11 @@
+groups:
+  - name: blackbox_alerts
+    rules:
+      - alert: SiteDown
+        expr: probe_success == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Site is down"
+          description: "{{ $labels.instance }} has been down for more than 1 minute."

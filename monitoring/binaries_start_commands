@@ -1,0 +1,11 @@
+./prometheus/prometheus --config.file=prometheus-exam.yml
+./alertmanager/alertmanager --config.file=alertmanager-exam.yml
+./blackbox_exporter/blackbox_exporter --config.file=blackbox-exam.yml
+
+
+killall prometheus
+killall alertmanager
+killall blackbox_exporter
+
+
+grafana data source:  http://172.17.0.1:9090

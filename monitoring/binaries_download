@@ -1,0 +1,13 @@
+wget https://github.com/prometheus/prometheus/releases/download/v3.11.2/prometheus-3.11.2.linux-amd64.tar.gz
+tar -xvzf prometheus-3.11.2.linux-amd64.tar.gz
+mv prometheus-*/ prometheus
+
+
+wget https://github.com/prometheus/alertmanager/releases/download/v0.28.1/alertmanager-0.28.1.linux-amd64.tar.gz
+tar -xvzf alertmanager-0.28.1.linux-amd64.tar.gz
+mv alertmanager-*/ alertmanager
+
+
+wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.27.0/blackbox_exporter-0.27.0.linux-amd64.tar.gz
+tar -xvzf blackbox_exporter-0.27.0.linux-amd64.tar.gz
+mv blackbox_exporter-*/ blackbox_exporter

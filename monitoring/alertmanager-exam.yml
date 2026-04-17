@@ -1,0 +1,15 @@
+global:
+  resolve_timeout: 1m
+
+receivers:
+  - name: 'webhook_receiver'
+    webhook_configs:
+      - url: 'https://webhook.site/84b462ba-ac43-4691-9803-d5d7eff48119'
+
+route:
+  group_by: ['alertname']
+  receiver: 'webhook_receiver'
+  routes:
+    - match:
+        alertname: 'SiteDown'
+      receiver: 'webhook_receiver'
